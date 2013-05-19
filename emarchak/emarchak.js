@@ -46,38 +46,59 @@ setTimeout(arguments.callee,200);};function $(id){return document.getElementById
 
 jQuery(document).ready(function($) {
 
-  // prepare left side icons
-  $('.pages li').each(function(){
-    var link = $(this).find('a'); // reduce the number of calls to find
+  // Optimization: Store the references outside the event handler:
+  var window = $('html');
+  var links = $('.menu li');
 
-    var linkWidth = link.width();
-    var iconWidth = link.find('i').width();
+  function checkWidth() {
+    var windowSize = window.width();
+    if (windowSize > 700) {
+      //if the window is greater than 700px prepare left side icons
+      $(links).each(function(){
+        var link = $(this).find('a'); // reduce the number of calls to find
+        var linkWidth = link.width();
+        var iconWidth = link.find('i').width();
 
-    var linkStyle = new Array();
-    linkStyle['display'] = 'block';
-    linkStyle['width'] = linkWidth;
-    linkStyle['left'] = iconWidth - linkWidth;
+        var linkStyle = new Array();
+        linkStyle['display'] = 'block';
+        linkStyle['width'] = linkWidth;
+        linkStyle['left'] = iconWidth - linkWidth;
 
-    link.css(linkStyle);
+        link.css(linkStyle);
+      });
+    }
+  }
+
+
+  // Execute checks on load
+  checkWidth();
+  // Bind event listener
+  $(window).resize(checkWidth);
+
+   // hoverIntent for left
+    links.hoverIntent(
+      function(){
+        $(this).find('a').animate({left : 0}, 500);
+      },
+      function(){
+        var link = $(this).find('a'); // reduce the number of calls to find
+
+        var linkWidth = link.width();
+        var iconWidth = link.find('i').width();
+
+        var leftPos = iconWidth - linkWidth;
+
+        link.animate({left : leftPos}, 500);
+      }
+    );
+
+  //watch for select changes
+  $('nav select').change( function () {
+      var url = $(this).val(); // get selected value
+      if (url) { // require a URL
+        document.location.href = url; // redirect
+      }
+      return false;
   });
 
-  // hoverIntent for left
-  $('.pages li').hoverIntent(
-    function(){
-      var fullWidth = new Array();
-      fullWidth['left'] = 0;
-      $(this).find('a').animate(fullWidth, 500);
-    },
-    function(){
-      var link = $(this).find('a'); // reduce the number of calls to find
-
-      var linkWidth = link.width();
-      var iconWidth = link.find('i').width();
-
-      var shortWidth = new Array();
-      shortWidth['left'] = iconWidth - linkWidth;
-
-      link.animate(shortWidth, 500);
-    }
-  );
 });
