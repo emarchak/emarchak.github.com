@@ -76,7 +76,6 @@ pre code {
   display:block;
   background: #fff url('code.png') repeat-y top left;
   padding-left: 1em;
-  overflow-y: scroll;
 }
 
 
