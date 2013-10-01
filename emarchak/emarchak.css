@@ -209,6 +209,11 @@ article .media.photoset {
   column-gap: 10px;
 }
 
+article iframe {
+  max-width: 100% !important;
+
+}
+
 article .media.photoset img {
   width: 100%;
   display:block;
@@ -290,7 +295,7 @@ footer p {
 
 
 /* !media queries - desktop */
-@media (min-width:700px) {
+@media screen and (min-width:700px) {
 
   .sidebar {
     position: fixed;
@@ -318,7 +323,7 @@ footer p {
 }
 
 /* !media queries - phones */
-@media (max-width:700px) {
+@media screen and (max-width:700px), screen and (max-device-width:700px), {
   .sidebar {
       background: -webkit-linear-gradient(bottom, #141313 0%,#262324 6%,#262324 100%);
       background: -moz-linear-gradient(bottom, #141313 0%,#262324 6%,#262324 100%);

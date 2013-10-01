@@ -1,14 +1,24 @@
-{block:tumblrThemr}
-  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lobster" type="text/css" />
-  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.0/css/font-awesome.css" />
-  <link rel="stylesheet" href="http://emarchak.github.com/emarchak/emarchak.min.css" type="text/css" media="screen" />
+<!DOCTYPE html>
+<html xml:lang="en" lang="en">
+<head>
+	<title>{block:SearchPage}{lang:Search results for SearchQuery} - {/block:SearchPage}{block:PostSummary}{PostSummary} - {/block:PostSummary}{Title}</title>
+	<link rel="icon" href="{Favicon}"/>
+	<link rel="alternate" type="application/rss+xml" title="RSS" href="{RSS}"/>
+	{block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lobster" type="text/css" />
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.0/css/font-awesome.css" />
+    <link rel="stylesheet" href="http://emarchak.github.io/emarchak/css/emarchak.css" type="text/css" media="screen" />
+</head>
+<body>
 
 <aside class="sidebar">
   <h1><a href="/">{Title}</a></h1>
   <div class="description">
-    <a href="http://myplanetdigital.com">developer</a>
+    <a href="http://myplanetdigital.com">coder</a>
     <a href="/tagged/bike">cyclist</a>
-    <a href="/tagged/improv">improvisor</a>
+    <a href="/tagged/improv">comedienne</a>
   </div>
 
   <nav>
@@ -21,11 +31,12 @@
     </ul>
     <select class="menu mobile">
       <option>?</option>
-      {block:HasPages}{block:Pages}<option><a href="{URL}">{Label}</a></option>{/block:Pages}{/block:HasPages}
-      <option><a href="http://github.com/emarchak">Here's some code.</a></option>
-      <option><a href="http://twitter.com/emarchak">Those are some tweets.</a></option>
-      <option><a href="http://pinterest.com/emarchak">That's a pinboard.</a></option>
-      <option><a href="{RSS}">There's an rss too.</a></li>
+      {block:HasPages}{block:Pages}<option value="{URL}">{Label}</option>{/block:Pages}{/block:HasPages}
+      <option value="http://github.com/emarchak">I'm on github.</option>
+      <option value="http://twitter.com/emarchak">I tweet things.</option>
+      <option value="http://pinterest.com/emarchak">I pin things I like.</option>
+      <option value="{RSS}">There's an rss too.
+      </option>
     </select>
 
   </nav>
@@ -43,7 +54,7 @@
     {/block:SearchPage}
     <!-- posts begin -->
     {block:Posts}
-      <article class="post">
+      <article class="post {PostType}">
         {block:Photo}
           {LinkOpenTag}
             <img src="{PhotoURL-500}" class="media" alt="{PhotoAlt}" />
@@ -148,7 +159,8 @@
    -->
   </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-<script src="http://emarchak.github.com/emarchak/emarchak.min.js"></script>
 
-{/block:tumblrThemr}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="http://emarchak.github.io/emarchak/js/emarchak.js"></script>
+</body>
+</html>
