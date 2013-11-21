@@ -192,11 +192,16 @@ article {
     }
     &.photoset {
       margin-bottom: 0;
+      padding-top: 0;
       padding-bottom: .5%;
       img {
-        width: 100%;
-        display: block;
-        margin-bottom: 2%;
+        width: 49%;
+        display: inline-block;
+        margin-right: 2%;
+        margin-top: 2%;
+        &:nth-child(even) {
+          margin-right:0;
+        }
       }
     }
   }
