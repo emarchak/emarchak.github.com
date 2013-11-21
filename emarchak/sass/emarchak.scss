@@ -191,10 +191,8 @@ article {
       height: auto;
     }
     &.photoset {
-      margin-bottom: 0;
       padding-top: 0;
-      padding-bottom: .5%;
-       @include clearfix;
+      @include clearfix;
       img {
         width: 49%;
         float: left;
