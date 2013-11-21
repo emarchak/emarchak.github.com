@@ -4,3 +4,5 @@
 demo.*
 demo
 
+.sass-cache
+.idea
