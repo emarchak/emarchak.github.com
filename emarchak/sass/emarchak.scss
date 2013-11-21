@@ -1,0 +1,308 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass";
+
+/**
+ * emarchak.css
+ *   styles for a custom tumblr theme
+ */
+
+body {
+  background-color: #f2f2f2;
+  position: relative;
+  font: 12px / 24px "Lucida Grande", sans-serif;
+  color: #262324;
+  margin: 0;
+}
+
+.sidebar {
+  background-color: #262324;
+}
+
+.sidebar {
+  nav, div {
+    padding: 0 3em;
+  }
+}
+
+#content {
+  article, nav {
+    padding: 0 3em;
+  }
+}
+
+.sidebar, #content {
+  padding: 3em 0;
+}
+
+article, .pagination {
+  margin: 0 auto 10em;
+  max-width: 500px;
+}
+
+/* !type */
+
+h1, h2 {
+  font-family: 'Lobster', 'Lucida Grande', sans-serif;
+  font-weight: normal;
+}
+
+a {
+  color: #ca0069;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+blockquote, pre {
+  background-color: #fff;
+  margin: 0 0 1em 0;
+  padding: 1em 1.5em;
+}
+
+blockquote {
+  font-weight: bolder;
+  line-height: 1.5em;
+  font-size: 1.5em;
+  footer, cite {
+    text-align: right;
+    font-weight: normal;
+    font-style: italic;
+  }
+}
+
+pre code {
+  display: block;
+  background: white url('code.png') repeat-y top left;
+  padding-left: 1em;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* !sidebar */
+
+.sidebar {
+  h1 {
+    font-size: 1em;
+    margin: 0 3em .25em;
+    border-bottom: .25em solid #ca0069;
+    a {
+      color: #f2f2f2 !important;
+      font-size: 3em;
+      text-transform: lowercase;
+    }
+  }
+  a, select {
+    color: #666;
+    text-decoration: none;
+  }
+  a:hover {
+    color: #f2f2f2;
+  }
+}
+
+.description a {
+  font-weight: bold;
+  color: #f2f2f2;
+  &:hover {
+    color: #ca0069;
+  }
+}
+
+.sidebar .menu {
+  display: none;
+  /*visual toggle in media queries below */
+}
+
+/* !desktop menu */
+
+.menu {
+  &.desktop {
+    padding: 0;
+    margin-top: 10em;
+    li {
+      margin-bottom: 1.75em;
+      font-size: 1.25em;
+      font-weight: bold;
+    }
+    i {
+      font-weight: normal;
+      font-size: 1.25em;
+      padding-left: .25em;
+    }
+  }
+  &.mobile {
+    font-weight: bold;
+    font-size: 1.25em;
+    position: absolute;
+    top: 2em;
+    right: 2em;
+    width: 1.5em;
+    height: 1.5em;
+    padding-left: .5em;
+    -webkit-appearance: none;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    text-align: center;
+    background-color: #666;
+    color: #262324;
+    border: none;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+/* !mobile menu */
+
+/* !sidebar animation */
+.pagination li, .menu.desktop li {
+  display: block;
+  overflow: hidden;
+    & a {
+    white-space: nowrap;
+    height: 2em;
+    position: relative;
+  }
+}
+
+/* !articles */
+
+article {
+  h2 {
+    font-size: 2.25em;
+    letter-spacing: .1em;
+    a {
+      color: #262324;
+      text-decoration: none;
+    }
+  }
+  .media {
+    width: 96%;
+    background-color: #fff;
+    padding: 2%;
+    img {
+      height: auto;
+    }
+    &.photoset {
+      margin-bottom: 0;
+      padding-bottom: .5%;
+      img {
+        width: 100%;
+        display: block;
+        margin-bottom: 2%;
+      }
+    }
+  }
+  iframe {
+    max-width: 100% !important;
+  }
+}
+
+/* !article footer */
+
+footer {
+  font-size: 0.8em;
+  line-height: 2em;
+  * {
+    color: #817477;
+    text-decoration: none;
+    text-transform: lowercase;
+  }
+  i {
+    padding-right: .75em;
+  }
+  p {
+    margin: 0;
+    display: inline-block;
+    padding-right: 5em;
+  }
+}
+
+/* !pagination */
+
+.pagination {
+  list-style: none;
+  overflow: auto;
+  padding: 0;
+  li {
+    float: left;
+    width: 50%;
+  }
+  a {
+    margin: auto 1.5em;
+    padding: 1em 0;
+    color: #817477;
+    text-decoration: none;
+    &:hover {
+      color: #ca0069;
+    }
+  }
+  .prev a {
+    float: right;
+  }
+  i {
+    padding: 0 .75em;
+    font-size: 1.25em;
+  }
+}
+
+/* !notes */
+
+.notes {
+  margin: 20px 0;
+  padding: 0;
+  list-style: none;
+  li {
+    background-color: #fff;
+    margin: 0 0 1em 0;
+    padding: 1em 1.5em;
+  }
+  blockquote {
+    margin: 0;
+    font-size: 1.25em;
+    color: #262324;
+  }
+}
+
+/* !media queries - desktop */
+@media screen and (min-width: 700px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 30%;
+    height: 100%;
+    background: -webkit-linear-gradient(left, #141313 0%, #262324 2%, #262324 100%);
+    background: -moz-linear-gradient(left, #141313 0%, #262324 2%, #262324 100%);
+    background: linear-gradient(left, #141313 0%, #262324 2%, #262324 100%);
+  }
+  .description a {
+    display: block;
+  }
+  #content {
+    width: 70%;
+  }
+  .sidebar .menu.desktop {
+    display: block;
+  }
+}
+
+/* !media queries - phones */
+@media screen and (max-width: 700px), screen and (max-device-width: 700px) {
+  .sidebar {
+    background: -webkit-linear-gradient(bottom, #141313 0%, #262324 6%, #262324 100%);
+    background: -moz-linear-gradient(bottom, #141313 0%, #262324 6%, #262324 100%);
+    background: linear-gradient(bottom, #141313 0%, #262324 6%, #262324 100%);
+    .menu.mobile {
+      display: block;
+    }
+  }
+}
+
