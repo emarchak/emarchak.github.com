@@ -5,6 +5,9 @@
 
 @import "compass";
 
+$highlight: #ca0069;
+$text: #262324;
+
 /**
  * emarchak.css
  *   styles for a custom tumblr theme
@@ -14,12 +17,12 @@ body {
   background-color: #f2f2f2;
   position: relative;
   font: 12px / 24px "Lucida Grande", sans-serif;
-  color: #262324;
+  color: $text;
   margin: 0;
 }
 
 .sidebar {
-  background-color: #262324;
+  background-color: $text;
 }
 
 .sidebar {
@@ -51,7 +54,7 @@ h1, h2 {
 }
 
 a {
-  color: #ca0069;
+  color: $highlight;
   &:hover {
     text-decoration: none;
   }
@@ -90,7 +93,7 @@ img {
   h1 {
     font-size: 1em;
     margin: 0 3em .25em;
-    border-bottom: .25em solid #ca0069;
+    border-bottom: .25em solid $highlight;
     a {
       color: #f2f2f2 !important;
       font-size: 3em;
@@ -110,7 +113,7 @@ img {
   font-weight: bold;
   color: #f2f2f2;
   &:hover {
-    color: #ca0069;
+    color: $highlight;
   }
 }
 
@@ -151,7 +154,7 @@ img {
     border-radius: 100%;
     text-align: center;
     background-color: #666;
-    color: #262324;
+    color: $text;
     border: none;
     &:hover {
       cursor: pointer;
@@ -179,7 +182,7 @@ article {
     font-size: 2.25em;
     letter-spacing: .1em;
     a {
-      color: #262324;
+      color: $text;
       text-decoration: none;
     }
   }
@@ -205,9 +208,38 @@ article {
       }
     }
   }
+
+  &.quote {
+    blockquote {
+      margin-bottom:0;
+    }
+    .copy {
+      > a {
+        display: block;
+        text-align: right;
+        font-style: italic;
+        text-decoration: none;
+        color: $text;
+        background: #fff;
+        padding: 0 1.5em 1em;
+        margin: 0 0 1em 0;
+        &:hover {
+          color: $highlight;
+          text-decoration: underline;
+        }
+        &:before {
+          content:"\2014";
+        }
+
+      }
+    }
+  }
+
   iframe {
     max-width: 100% !important;
   }
+
+
 }
 
 /* !article footer */
@@ -246,7 +278,7 @@ footer {
     color: #817477;
     text-decoration: none;
     &:hover {
-      color: #ca0069;
+      color: $highlight;
     }
   }
   .prev a {
@@ -272,7 +304,7 @@ footer {
   blockquote {
     margin: 0;
     font-size: 1.25em;
-    color: #262324;
+    color: $text;
   }
 }
 
@@ -284,9 +316,9 @@ footer {
     right: 0;
     width: 30%;
     height: 100%;
-    background: -webkit-linear-gradient(left, #141313 0%, #262324 2%, #262324 100%);
-    background: -moz-linear-gradient(left, #141313 0%, #262324 2%, #262324 100%);
-    background: linear-gradient(left, #141313 0%, #262324 2%, #262324 100%);
+    background: -webkit-linear-gradient(left, #141313 0%, $text 2%, $text 100%);
+    background: -moz-linear-gradient(left, #141313 0%, $text 2%, $text 100%);
+    background: linear-gradient(left, #141313 0%, $text 2%, $text 100%);
   }
   .description a {
     display: block;
@@ -302,9 +334,9 @@ footer {
 /* !media queries - phones */
 @media screen and (max-width: 700px), screen and (max-device-width: 700px) {
   .sidebar {
-    background: -webkit-linear-gradient(bottom, #141313 0%, #262324 6%, #262324 100%);
-    background: -moz-linear-gradient(bottom, #141313 0%, #262324 6%, #262324 100%);
-    background: linear-gradient(bottom, #141313 0%, #262324 6%, #262324 100%);
+    background: -webkit-linear-gradient(bottom, #141313 0%, $text 6%, $text 100%);
+    background: -moz-linear-gradient(bottom, #141313 0%, $text 6%, $text 100%);
+    background: linear-gradient(bottom, #141313 0%, $text 6%, $text 100%);
     .menu.mobile {
       display: block;
     }
