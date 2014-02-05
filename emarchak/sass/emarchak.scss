@@ -7,6 +7,7 @@
 
 $highlight: #ca0069;
 $text: #262324;
+$text-background: #fff;
 
 /**
  * emarchak.css
@@ -61,7 +62,7 @@ a {
 }
 
 blockquote, pre {
-  background-color: #fff;
+  background-color: $text-background;
   margin: 0 0 1em 0;
   padding: 1em 1.5em;
 }
@@ -188,7 +189,7 @@ article {
   }
   .media {
     width: 96%;
-    background-color: #fff;
+    background-color: $text-background;
     padding: 2%;
     img {
       height: auto;
@@ -220,7 +221,7 @@ article {
         font-style: italic;
         text-decoration: none;
         color: $text;
-        background: #fff;
+        background: $text-background;
         padding: 0 1.5em 1em;
         margin: 0 0 1em 0;
         &:hover {
@@ -232,6 +233,26 @@ article {
         }
 
       }
+    }
+  }
+
+  &.text {
+    h2 {
+      margin: 0 .5em -.5em;
+      background: $text;
+      padding: .5em;
+      display: inline-block;
+      position: relative;
+      a {
+        color: $text-background;
+        &:hover {
+          color: $highlight;
+        }
+      }
+    }
+    .copy {
+      background: $text-background;
+      padding: 1em 1.5em;
     }
   }
 
@@ -297,7 +318,7 @@ footer {
   padding: 0;
   list-style: none;
   li {
-    background-color: #fff;
+    background-color: $text-background;
     margin: 0 0 1em 0;
     padding: 1em 1.5em;
   }
