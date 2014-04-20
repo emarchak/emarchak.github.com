@@ -69,7 +69,6 @@ jQuery(document).ready(function($) {
     }
   }
 
-
   // Execute checks on load
   checkWidth();
   // Bind event listener
@@ -100,5 +99,8 @@ jQuery(document).ready(function($) {
       }
       return false;
   });
+
+  //add .last to children of photosets
+  $(".photoset img").last().addClass("last");
 
 });

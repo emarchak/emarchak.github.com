@@ -206,6 +206,10 @@ article {
         &:nth-child(even) {
           margin-right:0;
         }
+        &.last:nth-child(odd){
+          width:100%;
+        }
+
       }
     }
   }
