@@ -195,7 +195,6 @@ article {
       height: auto;
     }
     &.photoset {
-      padding-top: 0;
       @include clearfix;
       img {
         width: 49%;
