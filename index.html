@@ -5,10 +5,15 @@
       @import url('https://fonts.googleapis.com/css?family=Space+Mono');
       @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
       
+      body {
+        margin: 0;
+      }
+
       html {
         background: #F48EAB url('bg.png');
         color: #FFF;
         font-family: 'Space Mono', monospace;
+        background-size: 16px;
         font-size: 16px;
       }
       
@@ -22,7 +27,7 @@
       }
       
       section, header, aside, footer {
-        margin: 3rem 2.45rem;
+        margin: 3rem 3rem;
         max-width: 40rem;    
         clear: both;  
       }
@@ -129,10 +134,15 @@
         background-color: #BBB;
       }
       
-      @media (max-width: 720px) {
+      @media (max-device-width: 720px) {
         section, header, aside, footer {
-          margin: 3rem 0;
+          margin: 3rem 2rem;
           max-width: none;    
+        }
+
+        html {
+          background-size: 18px;
+          font-size: 18px;
         }
       }
       
