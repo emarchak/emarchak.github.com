@@ -1,14 +1,14 @@
 <html lang="en">
   <head>
     <title>Erin Marchak | Web Developer | Technical Architect</title>
-    <meta name="description" content="Experienced Technical Architect with a demonstrated history in the industry. Strong engineering professional with skills in User Experience, PHP, Drupal, Accessibility, & Symfony.">
+    <meta name="description" content="Experienced Technical Architect with a demonstrated history in the industry. Strong engineering professional with skills in User Experience, Accessibility, Ruby, React & Symfony.">
     <meta name="google-site-verification" content="DwA2hsWwtnXXhlQ6ne17rG-5xzEqDVm-Nr0xM_MoebE" />
     <link rel="icon" href="favicon-16.png" sizes="16x16">
     <link rel="icon" href="favicon-32.png" sizes="32x32">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <style>
       @import url('https://fonts.googleapis.com/css?family=Share+Tech+Mono');
-      @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
-      
+
       body {
         margin: 0;
       }
@@ -19,237 +19,110 @@
         font-family: 'Share Tech Mono', monospace;
         background-size: 16px;
         font-size: 16px;
+        transition: background-color 0.4s, box-shadow 0.4s;
       }
-      
-      a, a:link, a:visited {
-        color: #F48EAB;
-        text-decoration: underline;
-      }
-      
-      a:hover, a:active {
-        color: #BBB;
-      }
-      
+
       section, header, aside, footer {
-        margin: 3rem 3rem;
-        max-width: 40rem;    
-        clear: both;  
+        margin: 0 auto;
+        max-width: 40rem;
+        text-align: center;
       }
-      
-      section:after,
-      header:after,
-      aside:after,
-      footer:after {
-        content: "";
-        display: table;
-        clear: both;
+
+      .vertically-center {
+        position: relative;
+        top: 50vh;
+        transform: translateY(-50%);
       }
-      
-      h1, h2,
-      aside, footer,
-      section {
-        background: #FFF;
-        color: #F48EAB;
-      }
-      
+
       .logo {
-        position: absolute;
-        right: 3rem;
-        top: 2.8rem;
-        height: 10rem;
+        height: 15rem;
         width: auto;
+        border-radius: 100%;
+        background-color: #FFF;
+        box-shadow: 0 0 1rem 0.25rem rgba(244, 142, 171, 1);
       }
       
       h1 {
-        font-size: 4rem;
-        line-height: 4rem;
-        padding-right: 1.6rem;
+        font-size: 7rem;
+        line-height: 6rem;
+        margin: 1rem 0;
         text-transform: uppercase;
-      }
-      
-      h2 {
-        font-size: 1.75rem;
-        line-height: 2rem;
-        padding-right: 1rem;
-      }
-  
-      h3 {
-        margin-left: -0.1rem;
-        padding-top: 1rem;
-        text-transform: uppercase;
-      }  
-       
-      h1,
-      h2 {
-        display: inline-block;
-        float: left;
-        clear: both;
-
-        margin: 0 0 1rem;
-      }
-      
-      h1 span {
-        margin-left :-0.3rem;
-      }
-      
-      h2 span {
-        margin-left:-0.2rem;
-      }
-      
-      aside,
-      footer {
-        padding: 1rem 0;
+        text-shadow: 0 0 1rem rgba(244, 142, 171, 1);
       }
 
-      footer > p,
-      aside > p {
-        padding: 0 2rem;
+      p {
+        margin: 1rem 0;
       }
 
-      dl {
-        margin: 1rem 0 2rem 2rem;
-        padding-bottom: 2rem;
-      }
-      
-      dt, dd {
-        padding-right: 2rem;
-      }
-      
-      dd {
-        font-size: 0.8rem;
-      }
-      
-      dd + dt {
-        margin-top: 1rem;
-        padding-top: 1rem;
-        border-top: 1px solid #F48EAB;
-      }
-      
       a.icon {
-        color: #FFF;
-        background-color: #F48EAB;
+        color:  #F48EAB;
+        background-color: #FFF;
         display: inline-block;
         height: 2rem;
         width: 2rem;
-        margin-right: 1rem;
         text-align: center;
+        border-radius: 2rem;
+        box-shadow: 0 0 1rem 0.25rem rgba(244, 142, 171, 1)
       }
-      
+
+      a.icon + a.icon {
+        margin-left: 1rem;
+      }
+
       a.icon i {
         line-height: 2rem;
       }
       
-      a.icon:hover, a.icon:active {
-        background-color: #BBB;
+      a.icon:hover,  a.icon:focus {
+        background-color: #EEE;
+        box-shadow: 0 0 1rem 0.25rem rgba(255, 153, 182, 1)
+
       }
 
+      a.icon:active {
+        box-shadow:  0 0 1rem 0.25rem rgba(233, 130, 160, 1)
+      }
+
+      .narrow {
+        letter-spacing: -0.075em;
+      }
       @media (max-width: 720px), (max-device-width: 720px) {
-        section, header, aside, footer {
-          margin: 3rem 2rem;
-          max-width: none;    
-        }
-
-        .logo {
-          position: relative;
-          right: 0;
-          margin-bottom: 3rem;
-          margin-left: 2rem;
-        }
-
         html {
           background-size: 18px;
           font-size: 18px;
         }
-
-        a.icon {
-          height: 4rem;
-          width: 4rem;
-          margin-right: 2rem;
+        .logo {
+          height: 12rem;
         }
-
-        a.icon i {
-          line-height: 4rem;
-          font-size: 2rem;
-        }
-
       }
       
     </style>
   </head>
   <body>
-    <img class="logo" src="logo.svg" aria-hidden="true"/>
+  <section class="vertically-center">
+    <svg class="logo" version="1.1" xmlns="http://www.w3.org/2000/svg"
+         x="0px" y="0px" width="41px" height="42px" viewBox="-0.501 -0.75 41 42" enable-background="new -0.501 -0.75 41 42">
+      <rect x="8.25" y="14.48" fill="#F287AA" width="11.539" height="3.297"/>
+      <rect x="8.25" y="18.602" fill="#F287AA" width="11.539" height="3.297"/>
+      <rect x="8.25" y="22.723" fill="#F287AA" width="11.539" height="3.297"/>
+      <rect x="20.612" y="14.481" fill="#F287AA" width="3.297" height="11.539"/>
+      <rect x="24.733" y="14.481" fill="#F287AA" width="3.297" height="11.539"/>
+      <rect x="28.854" y="14.481" fill="#F287AA" width="3.297" height="11.539"/>
+      <path fill="#F287AA" d="M36.272,24.371c0-0.91-0.736-1.648-1.646-1.648c-0.912,0-1.65,0.738-1.65,1.648s0.738,1.648,1.65,1.648
+	C35.536,26.02,36.272,25.281,36.272,24.371"/>
+    </svg>
+
     <header>
-      <h1><span>Erin Marchak</span></h1>
-      <h2><span>web Developer</span></h2>
-      <h2><span>Technical Architect</span></h2>
+      <h1 aria-label="Erin Marchak">E<span class="narrow">ri</span>n Ma<span class="narrow">rc</span>hak</h1>
     </header>
-      <aside>
-        <p>Experienced Technical Architect with a demonstrated history in the industry. Strong engineering professional with skills in User Experience, PHP, Drupal, Accessibility, & Symfony.</p>
-        <p>Also, a sassy lady.</p>
-        <p>
-          <a class= "icon" href="http://dgo.to/@emarchak"><i class="fa fa-drupal" aria-label="drupal.org"></i></a><a class= "icon" href="https://www.linkedin.com/in/emarchak/"><i class="fa fa-linkedin" aria-label="linkedin"></i></a><a class= "icon" href="https://twitter.com/emarchak"><i class="fa fa-twitter" aria-label="twitter"></i></a><a class= "icon" href="https://www.instagram.com/emarchak/"><i class="fa fa-instagram" aria-label="instagram"></i></a><a class= "icon" href="mailto:hello@erin.computer"><i class="fa fa-envelope" aria-label="email me"></i></a><a class= "icon" href="http://emarchak.tumblr.com"><i class="fa fa-tumblr" aria-label="tumblr"></i></a>
-        </p>
-      </aside>
-    <section>
-      <h3>Recent Presentations</h3>
-      <dl>
-        <dt>Masters of the Universe: Live-coding a React Application using Drupal Services</dt>
-        <dd>Apr 27, 2017 @ DrupalCon Baltimore (<a href="https://www.youtube.com/watch?v=WVbGYipxCuI">watch</a>)</dd>
-        <dt>Closing the Gaps: Prioritizing Accessibility in Custom Themes with Drupal 8</dt>
-        <dd>Sep 28, 2016 @ DrupalCon Dublin (<a href="https://www.youtube.com/watch?v=cg5gDrfYg78">watch</a>)</dd>
-        <dt>Fast Paced Drupal 8: Accelerating Development with Composer, Drupal Console and Services</dt>
-        <dd>Mar 23, 2016 @ Acquia Webinars (<a href="https://www.youtube.com/watch?v=D25VvNfT0J4">watch</a>)</dd>
-      </dl>
-    </section>
-
-    <section>
-      <h3>Experience</h3>
-        <dl>
-          <dt>Associate Director, Drupal Practices (2017 – Present) @ <a href="http://myplanet.com">Myplanet</a></dt>
-          <dd>Assess and optimize the tools, techniques, and practices used by production teams. Build relationships with sales partners through joint exploration of new technologies. Embed on teams to coach members through improving technical competencies and agile practices.</dd>
-          <dt>Technical Architect & Lead Developer (2011 – 2017) @ <a href="http://myplanet.com">Myplanet</a></dt>
-          <dd>Emphasis of e-commerce integration within Drupal 6, 7 and 8 and decoupled Node.js applications. Built enterprise CMSs, utilizing multiple CDN sources, DevOps tools, and WCAG compliancy. Utilized agile techniques to coach development teams, and train developers for Acquia Certification.</dd>
-          <dt>Developer &amp; Designer (2010 – 2011) @ <a href="http://openconcept.ca/">OpenConcept</a></dt>
-          <dd>Built web portals for international non-profit and government organizations, using Drupal 6 and 7. Work was compliant with WCAG 2.0 (AA) as mandated by the AODA Integrated Accessibility Standards.</dd>
-          <dt>Developer (Jun 2010 – May 2011) @ <a href="http://www.stop14.ca/">Stop14 Media</a></dt>
-          <dd>Developed Drupal and Wordpress websites and email campaigns for art festival clients. Optimized development processes for quick turn-around, and a high level of user engagement.</dd>
-        </dl>
-    </section>
-
-    <section>
-      <h3>Education</h3>
-      <dl>
-        <dt>Bachelor of Arts (Honours) Film & Media Studies, Philosophy @ <a href="http://queensu.ca">Queen's University (Canada)</a></dt>
-        <dd>Studied International Marketing at the Queen's International Study Centre in Herstmonceux, UK. Involved with Queen’s Bands, QTV (News show), Golden Words (Newspaper), & Philosopherʼs Café (Magazine).</dd>
-      </dl>
-    </section>
-
-    <section>
-      <h3>Certifications</h3>
-      <dl>
-        <dt>Certified Drupal 7 Grand Master</dt>
-        <dd>2015 @ <a href="https://certification.acquia.com/user/721862">Acquia</a></dd>
-        <dt>Certified Scrum Product Owner</dt>
-        <dd>2013 @ <a href="http://www.berteig.com/">Berteig Consulting</a></dd>
-      </dl>
-    </section>
-
-    <section>
-      <h3>Volunteer</h3>
-      <dl>
-        <dt>Board of Directors - <a href="http://drupalnorth.org">Drupal North</a></dt>
-        <dd>Treasurer</dd>
-        <dt>Board of Directors – <a href="http://meetup.com/drupalTO">DrupalTO</a></dt>
-        <dd>Treasurer</dd>
-        <dt>Board of Directors – <a href="http://randonneursontario.ca">Randonneurs Ontario</a></dt>
-        <dd>Member-at-Large</dd>
-      </dl>
-    </section>
-
-    <footer>
       <p>
-        <a class= "icon" href="http://dgo.to/@emarchak"><i class="fa fa-drupal" aria-label="drupal.org"></i></a><a class= "icon" href="https://www.linkedin.com/in/emarchak/"><i class="fa fa-linkedin" aria-label="linkedin"></i></a><a class= "icon" href="https://twitter.com/emarchak"><i class="fa fa-twitter" aria-label="twitter"></i></a><a class= "icon" href="https://www.instagram.com/emarchak/"><i class="fa fa-instagram" aria-label="instagram"></i></a><a class= "icon" href="mailto:hello@erin.computer"><i class="fa fa-envelope" aria-label="email me"></i></a><a class= "icon" href="http://emarchak.tumblr.com"><i class="fa fa-tumblr" aria-label="tumblr"></i></a>
+        <a class= "icon" href="mailto:hello@erin.computer"><i class="fas fa-envelope" aria-label="email me"></i>
+        </a><a class= "icon" href="https://www.linkedin.com/in/emarchak/"><i class="fab fa-linkedin" aria-label="linkedin"></i>
+        </a><a class= "icon" href="https://www.github.com/emarchak/"><i class="fab fa-github-alt" aria-label="github"></i>
+        </a><a class= "icon" href="https://twitter.com/emarchak"><i class="fab fa-twitter" aria-label="twitter"></i>
+        </a><a class= "icon" href="https://www.instagram.com/emarchak/"><i class="fab fa-instagram" aria-label="instagram"></i>
+        </a><a class= "icon" href="https://www.strava.com/athletes/1105447"><i class="fab fa-strava" aria-label="strava"></i></a>
       </p>
-    </footer>
+  </section>
   </body>
 </html>
