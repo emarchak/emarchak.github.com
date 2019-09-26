@@ -2,11 +2,14 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
+import Logo from './logo'
+
 const Header = ({ siteTitle }) => (
   <header
     style={{
-      background: `rebeccapurple`,
+      background: `white`,
       marginBottom: `1.45rem`,
+      boxShadow: `0 0 1rem 0.25rem hsla(343, 82%, 76%, 1)`,
     }}
   >
     <div
@@ -17,10 +20,12 @@ const Header = ({ siteTitle }) => (
       }}
     >
       <h1 style={{ margin: 0 }}>
+        <Logo height={1.75} inversed />
         <Link
           to="/"
           style={{
-            color: `white`,
+            marginLeft: `1rem`,
+            color: `hsla(343, 82%, 76%, 1)`,
             textDecoration: `none`,
           }}
         >
