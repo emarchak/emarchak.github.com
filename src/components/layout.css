@@ -27,7 +27,7 @@ body {
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
-  background: hsla(343, 82%, 76%, 1) url(../images/bg.png);
+  background: hsla(343, 82%, 76%, 1) url(../images/bg.png) fixed;
   color: hsla(0, 0%, 12%, 1);
 }
 
@@ -42,13 +42,17 @@ h1, h2, h3, h4, h5, h6, p {
   margin-bottom: 1.45rem;
   color: inherit;
   text-rendering: optimizeLegibility;
-  line-height: 1.1;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Share Tech Mono", monospace;
   letter-spacing: -.075rem;
+  line-height: 1.1;
 }
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  border-bottom: none;
+ }
 
 h1 {
   font-size: 2.25rem; 
@@ -67,6 +71,11 @@ h5 {
 }
 h6 {
   font-size: 0.78405rem;
+}
+
+p {
+  line-height: 1.8;
+  word-wrap: break-word;
 }
 
 article,
@@ -90,6 +99,6 @@ a, a:visited, a:active {
   border-bottom: thin hsla(0, 0%, 12%, 1) dashed;
 }
 
-h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
- border-bottom: none;
+a:hover {
+  border-bottom: none;
 }

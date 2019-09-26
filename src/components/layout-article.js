@@ -7,12 +7,26 @@
 
 import React from "react"
 import PropTypes from "prop-types"
+
+import { graphql, useStaticQuery } from "gatsby"
+import Header from "./header"
 import Footer from "./footer"
 import "./layout.css"
 
-const Layout = ({ children }) => {
+const LayoutArticle = ({ children }) => {
+  const data =  useStaticQuery(graphql`
+  query SiteTitleQuery {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+ `)
+
   return (
     <>
+      <Header siteTitle={data.site.siteMetadata.title} />
       <div
         style={{
           margin: `0 auto`,
@@ -28,8 +42,8 @@ const Layout = ({ children }) => {
   )
 }
 
-Layout.propTypes = {
+LayoutArticle.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export default Layout
+export default LayoutArticle
