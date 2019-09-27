@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/pages/rides/index.js"],"names":["NotFoundPage"],"mappings":"0FAAA,oBAEeA,YAAf","file":"component---src-pages-rides-index-js-d68ccb182864f5d71e75.js","sourcesContent":["import NotFoundPage from '../404'\n\nexport default NotFoundPage\n"],"sourceRoot":""}
