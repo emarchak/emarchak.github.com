@@ -8,6 +8,7 @@ const Footer = () => (
       boxShadow: `0 0 1rem 0.25rem hsla(343, 82%, 76%, 1)`,
       fontFamily: `"Share Tech Mono", monospace`,
       letterSpacing: `-.075rem`,
+      minHeight: `3rem`,
     }}
   >
     <div
