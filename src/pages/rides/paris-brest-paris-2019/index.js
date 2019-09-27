@@ -22,7 +22,6 @@ Rule.propTypes = {
 const IndexPage = () => (
   <LayoutArticle>
     <SEO title="Bonne route et bon courage, or 5 rules to accomplish the impossible" />
-    <h1>HELLO</h1>
     <article style={articleStyle}>
       <h1><Lang>Bonne route et bon courage</Lang></h1><h2>or, 5 rules to accomplish the impossible</h2>
       
