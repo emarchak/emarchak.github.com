@@ -20,7 +20,7 @@ Rule.propTypes = {
 }
 
 const IndexPage = () => (
-  <LayoutArticle>
+  <LayoutArticle pageTitle="Paris-Brest-Paris 2019: Ride Report">
     <SEO title="Bonne route et bon courage, or 5 rules to accomplish the impossible" />
     <article style={articleStyle}>
       <h1><Lang>Bonne route et bon courage</Lang></h1><h2>or, 5 rules to accomplish the impossible</h2>

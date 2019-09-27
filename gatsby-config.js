@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Paris-Brest-Paris 2019: Ride Report`,
-    description: `Bonne route et bon courage, or 5 rules to accomplish the impossible.`,
+    title: `Erin Marchak | Web Developer | Team Lead`,
+    description: `Erin has 9 years of experience with both server- and client-side web development, specializing in digital marketing. She's an Agile evangelist that encourages teams to allow their curiosity to drive them and is passionate about creating emotional connections with people through technology. `,
     author: `@emarchak`,
   },
   plugins: [
@@ -25,5 +25,11 @@ module.exports = {
         display: 'swap'
       }
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        icon: 'src/images/favicon-32.png'
+      }
+    }
   ],
 }

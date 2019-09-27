@@ -13,7 +13,7 @@ import Header from "./header"
 import Footer from "./footer"
 import "./layout.css"
 
-const LayoutArticle = ({ children }) => {
+const LayoutArticle = ({ pageTitle, children }) => {
   const data =  useStaticQuery(graphql`
   query SiteTitleQuery {
     site {
@@ -24,9 +24,11 @@ const LayoutArticle = ({ children }) => {
   }
  `)
 
+  const siteTitle = pageTitle ? pageTitle : data.site.siteMetadata.title
+
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
+      <Header siteTitle={siteTitle} />
       <div
         style={{
           margin: `0 auto`,
@@ -44,6 +46,7 @@ const LayoutArticle = ({ children }) => {
 
 LayoutArticle.propTypes = {
   children: PropTypes.node.isRequired,
+  pageTitle: PropTypes.string
 }
 
 export default LayoutArticle
