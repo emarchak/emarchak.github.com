@@ -8,7 +8,9 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Footer from "./footer"
-import "./layout.css"
+import "../styles/layout.css"
+
+import {maxWidth} from "../styles/variables"
 
 const Layout = ({ children }) => {
   return (
@@ -16,7 +18,7 @@ const Layout = ({ children }) => {
       <div
         style={{
           margin: `0 auto`,
-          maxWidth: 960,
+          maxWidth,
           padding: `0px 1.0875rem 1.45rem`,
           paddingTop: 0,
           minHeight: `calc(100vh - 4rem)`,
