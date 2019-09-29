@@ -1,7 +1,8 @@
 export default {
   mediaQueries: {
-    mobileOnly: '@media (max-width: 720px), (max-device-width: 720px)',
-    desktopOnly: '@media (min-width: 721px), (min-device-width: 721px)'
+    sml: '@media (max-width: 720px)',
+    medUp: '@media (min-width: 721px)',
+    bigUp: '@media (min-width: 961px)',
   },
   maxWidth: 960,
   fonts: {
@@ -14,4 +15,9 @@ export default {
     copy: `hsla(0, 0%, 12%, 1)`
   },
   boxShadow: `0 0 1rem 0.25rem hsla(343, 82%, 76%, 1)`,
+  boxShadowDark: `0 0 1rem 0.25rem hsla(343, 41%, 76%, 1)`,
+  padding: {
+    basePadding: `1.45rem`,
+    largePadding: `2.5rem`
+  }
 }

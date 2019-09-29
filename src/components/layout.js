@@ -12,7 +12,10 @@ import "../styles/layout.css"
 
 import styleVariables from "../styles/variables"
 
-const {maxWidth} = styleVariables;
+const {
+  maxWidth,
+  padding: {basePadding},
+} = styleVariables;
 
 const Layout = ({ children }) => {
   return (
@@ -21,7 +24,7 @@ const Layout = ({ children }) => {
         style={{
           margin: `0 auto`,
           maxWidth,
-          padding: `0px 1.0875rem 1.45rem`,
+          padding: `0px 1.0875rem ${basePadding}`,
           paddingTop: 0,
           minHeight: `calc(100vh - 4rem)`,
         }}

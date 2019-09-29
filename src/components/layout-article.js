@@ -13,17 +13,18 @@ import "../styles/layout.css"
 import styleVariables from "../styles/variables"
 
 const {
-  mediaQueries: {mobileOnly},
+  mediaQueries: {sml},
   maxWidth, 
+  padding: {basePadding}
 } = styleVariables;
 
 const articleStyle = {
   margin: `0 auto`,
   maxWidth,
-  padding: `0 1.0875rem 1.45rem`,
+  padding: `0 1.0875rem ${basePadding}`,
   paddingTop: 0,
-  [mobileOnly]: {
-    padding: `0 0 1.45rem`,
+  [sml]: {
+    padding: `0 0 ${basePadding}`,
   }
 }
 

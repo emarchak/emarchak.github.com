@@ -13,7 +13,7 @@ import styleVariables from "../styles/variables";
 const {
   boxShadow,
   colors: {primary, secondary},
-  mediaQueries: {desktopOnly}
+  mediaQueries: {medUp}
 } = styleVariables
 
 const icon = {
@@ -44,7 +44,7 @@ const IndexPage = () => (
       position: `relative`, 
       textAlign: `center`,
       top: `1rem`,
-      [desktopOnly]: {
+      [medUp]: {
         top: `50vh`,
         transform: `translateY(-50%)`,
       }
@@ -59,7 +59,7 @@ const IndexPage = () => (
         margin: `1rem 0`,
         textTransform: `uppercase`,
         textShadow: `0 0 1rem rgba(244, 142, 171, 1)`,
-        [desktopOnly]: {
+        [medUp]: {
           fontSize: `6rem`,
           lineHeight: `5rem`,
         }
