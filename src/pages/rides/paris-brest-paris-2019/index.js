@@ -11,7 +11,7 @@ import styleVariables from '../../../styles/variables'
 
 const {
   colors: {secondary},
-  mediaQueries: {mobileOnly},
+  mediaQueries: {sml},
   padding: {basePadding, largePadding}
 } = styleVariables
 
@@ -19,7 +19,7 @@ const articleStyle = {
   backgroundColor: secondary,
   padding: `2rem ${largePadding}`,
   marginBottom: `4rem`,
-  [mobileOnly]: {
+  [sml]: {
     padding: `2rem ${basePadding}`,
   }
 }
