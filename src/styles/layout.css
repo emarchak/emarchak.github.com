@@ -5,6 +5,7 @@ html {
   box-sizing: border-box;
   overflow-y: scroll;
 }
+
 * {
   box-sizing: inherit;
 }
@@ -111,3 +112,8 @@ a:hover {
   border-bottom: none;
 }
 
+.pageContent {
+   margin: 0 auto;
+   max-width: 960px;
+   padding: 0 1.0875rem 1.45rem;
+}

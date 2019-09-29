@@ -1,5 +1,8 @@
 export default {
-  breakpoints: {mobileOnly: '(max-width: 720px), (max-device-width: 720px)'},
+  mediaQueries: {
+    mobileOnly: '@media (max-width: 720px), (max-device-width: 720px)',
+    desktopOnly: '@media (min-width: 721px), (min-device-width: 721px)'
+  },
   maxWidth: 960,
   fonts: {
     heading: `"Share Tech Mono", monospace`,

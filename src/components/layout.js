@@ -10,7 +10,9 @@ import PropTypes from "prop-types"
 import Footer from "./footer"
 import "../styles/layout.css"
 
-import {maxWidth} from "../styles/variables"
+import styleVariables from "../styles/variables"
+
+const {maxWidth} = styleVariables;
 
 const Layout = ({ children }) => {
   return (

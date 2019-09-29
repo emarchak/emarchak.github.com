@@ -5,10 +5,20 @@ import LayoutArticle from "../../../components/layout-article"
 import Lang from "../../../components/language"
 import SEO from "../../../components/seo"
 
+import styleVariables from '../../../styles/variables'
+
+const {
+  colors: {secondary},
+  mediaQueries: {mobileOnly},
+} = styleVariables;
+
 const articleStyle = {
-  backgroundColor: `white`,
+  backgroundColor: secondary,
   padding: `2rem 2.5rem`,
   marginBottom: `4rem`,
+  [mobileOnly]: {
+    padding: `2rem 1.45rem`,
+  }
 };
 
 const Rule = ({number}) => (
@@ -22,7 +32,7 @@ Rule.propTypes = {
 const IndexPage = () => (
   <LayoutArticle pageTitle="Paris-Brest-Paris 2019: Ride Report">
     <SEO title="Bonne route et bon courage, or 5 rules to accomplish the impossible" />
-    <article style={articleStyle}>
+    <article css={articleStyle}>
       <h1><Lang>Bonne route et bon courage</Lang></h1><h2>or, 5 rules to accomplish the impossible</h2>
       
       <p>To understand any of the following, you’ll have to understand that my vice of choice is gluttony. Gluttony for all things. If it’s a food that I love, I’ll eat until I’m bursting. If it’s a new show I’m enthralled with, I'll binge it until the sun comes up. If it’s a friend that I love, we’ll have vacations where we can’t stand each other’s faces at the end. I overcommit to things.</p>
@@ -31,7 +41,7 @@ const IndexPage = () => (
       <p><Lang>Brevets</Lang> are organized rides over 200km. They have controls about every 100km where you must get your control card stamped (like a passport) to prove that you were there. There’s usually food and bike mechanics at controls, plus you can get additional support from friends and family. Outside of these controls, however, you’re on your own. Controls open and close at specific times based on an <a href="http://www.randonneurs.bc.ca/introduction/timerule.html">archaic calculation</a>. If you arrive after a control closes, you’re marked “did not finish” or “scratched,” so you have to keep moving. <Lang>brevets</Lang> have a total time limit to finish, too. This time limit includes sleeping, eating, everything. </p>
       <p>Paris-Brest-Paris is 1200km long, and I had 90 hours to finish. I broke the ride into four days, sleeping three times at the controls where my partner and sister would have my drop bag containing extra equipment and food. My plan was three nights with four hours of sleep each, plus a four hour buffer at the end. I had completed a 1000km <Lang>brevet</Lang> to qualify, so I was confident in handling multi-day rides. I had a plan! <Rule number={1}/> I created a spreadsheet! Nothing could go wrong! </p>
     </article>
-    <article style={articleStyle}>
+    <article css={articleStyle}>
       <p>I start off with the final wave of riders of the day, with the sun setting behind us. Nerves get to everyone, 200 riders in a tight peloton through the rolling Breton countryside. We snake through small medieval towns in the dark, lit up by the front lamps of the riders in front of me. I make it to the first control at Mortange-au-Perche at 2am, a full 45 minutes ahead of schedule. I immediately load up on water, hot coffee, and fresh baguettes. <Rule number={2} /> </p>
       <p>Following my plan <Rule number={1} />, I leave right on schedule. 30 minutes later, I start to feel my rear tire become softer and softer until I have to pull off the side of the road. I have tubeless tires, so all that’s inside the tire is this goopy sealant that hardens around a puncture. The sealant is leaking out the sidewalls and the tread, as if the tire were porous. After an hour of trial and error, I give up fixing the tire itself and throw in a backup tube I carry with me. <Rule number={3} /></p>
       <p>It holds until morning. I hit the control at Villaines-la-Juhel right as day breaks. I fill myself with a big bowl of <Lang>café au lait</Lang> and <Lang>pain au chocolate</Lang> that was still warm from the oven. By the afternoon, the tire is slowly leaking again. About every two hours, I have to stop and re-pump the tire, which is slowing me down significantly. </p>
@@ -58,7 +68,7 @@ const IndexPage = () => (
       <p>It’s (obviously) hard to summarize an experience like this into something easily digestible. The whole ride seems at once both bigger than anything I could describe, and filled with so many small experiences I could never share them all. The journey was far, far better than the destination and I was able to prove to myself that I could do things greater than I could imagine. </p>
       <p>We often limit ourselves with words like “can’t” or “never”, especially when faced with things we haven’t done before. Instead, ask yourself “What needs to happen for you to accomplish the impossible?” “What needs to change to get it from impossible to possible?” And of course, “Can I change it?”</p>
     </article>
-    <article style={articleStyle}>
+    <article css={articleStyle}>
       <h2>5 Rules to Accomplish the Impossible</h2>
       <ol>
         <li id={'rule1'}>Break it down with a plan.
