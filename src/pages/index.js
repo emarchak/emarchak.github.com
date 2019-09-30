@@ -1,5 +1,6 @@
 import React from "react"
 
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { faStrava, faInstagram, faTwitter, faGithubAlt, faLinkedin } from '@fortawesome/free-brands-svg-icons'
@@ -67,11 +68,11 @@ const IndexPage = () => (
     </header>
     <p>
         <a css={icon} href="mailto:hello@erin.computer"><FontAwesomeIcon icon={faEnvelope}/>
-        </a><a css={icon} href="https://www.linkedin.com/in/emarchak/"><FontAwesomeIcon icon={faLinkedin}/>
-        </a><a css={icon} href="https://www.github.com/emarchak/"><FontAwesomeIcon icon={faGithubAlt}/>
-        </a><a css={icon} href="https://twitter.com/emarchak"><FontAwesomeIcon icon={faTwitter}/>
-        </a><a css={icon} href="https://www.instagram.com/emarchak/"><FontAwesomeIcon icon={faInstagram}/>
-        </a><a css={icon} href="https://www.strava.com/athletes/1105447"><FontAwesomeIcon icon={faStrava}/></a>
+        </a><OutboundLink css={icon} href="https://www.linkedin.com/in/emarchak/"><FontAwesomeIcon icon={faLinkedin}/>
+        </OutboundLink><OutboundLink css={icon} href="https://www.github.com/emarchak/"><FontAwesomeIcon icon={faGithubAlt}/>
+        </OutboundLink><OutboundLink css={icon} href="https://twitter.com/emarchak"><FontAwesomeIcon icon={faTwitter}/>
+        </OutboundLink><OutboundLink css={icon} href="https://www.instagram.com/emarchak/"><FontAwesomeIcon icon={faInstagram}/>
+        </OutboundLink><OutboundLink css={icon} href="https://www.strava.com/athletes/1105447"><FontAwesomeIcon icon={faStrava}/></OutboundLink>
       </p>
   </section>
   </Layout>

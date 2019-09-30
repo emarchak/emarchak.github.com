@@ -31,6 +31,13 @@ module.exports = {
       options: {
         icon: 'src/images/favicon-32.png'
       }
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'UA-149006221-1',
+        head: false,
+      }
     }
   ],
 }
