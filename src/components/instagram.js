@@ -35,11 +35,13 @@ const Instagram = ({id, type}) => {
     margin: `${basePadding} 0`,
     background: secondary,
     textAlign: `center`,
+    width: `100%`,
     [medUp]: {
       margin: `-${basePadding} 0 ${basePadding}`,
       border: `${basePadding} solid ${secondary}`,
       float: type,
-      borderWidth: medBorderWidth
+      borderWidth: medBorderWidth,
+      width: `auto`
     },
     [bigUp]: {
       margin: bigMargin,
