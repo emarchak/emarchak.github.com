@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[5,2],{242:function(t,e,n){"use strict";n.r(e),function(t){n(0);var u=n(243),a=n(241);e.default=function(){return t.createElement(u.a,null,t.createElement(a.a,{title:"404: Not found"}),t.createElement("h1",null,"NOT FOUND"),t.createElement("p",null,"You just hit a route that doesn't exist... the sadness."))}}.call(this,n(64))},246:function(t,e,n){"use strict";n.r(e);var u=n(242);e.default=u.default}}]);
+//# sourceMappingURL=component---src-pages-rides-index-js-bfbb1be179036eb649d6.js.map
